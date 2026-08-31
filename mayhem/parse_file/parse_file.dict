@@ -1,0 +1,11 @@
+# libFuzzer dictionary for tz-rs's TZif (RFC 8536) file parser (TimeZone::from_tz_data).
+# Grammar: libFuzzer dict tokens accept only \\, \" and \xHH escapes — no other escapes, and every
+# token must be on a single line (a literal newline inside a token breaks the whole file).
+"TZif"
+"\x00"
+"\x32"
+"\x33"
+"UTC\x00"
+"\x00\x00\x00\x00"
+"\x00\x00\x00\x01"
+"\xff\xff\xff\xff"

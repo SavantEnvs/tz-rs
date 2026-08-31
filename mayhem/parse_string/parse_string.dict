@@ -1,0 +1,14 @@
+# libFuzzer dictionary for tz-rs's POSIX TZ string parser (TimeZone::from_posix_tz).
+# Grammar: libFuzzer dict tokens accept only \\, \" and \xHH escapes — no other escapes, and every
+# token must be on a single line.
+"UTC"
+"GMT"
+"HST10"
+"CET-1CEST"
+"M3.5.0"
+"M10.5.0"
+"J365"
+"/3"
+",0/0,"
+"<-03>3"
+":"

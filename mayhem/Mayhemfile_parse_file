@@ -1,0 +1,12 @@
+project: savantenvs/tz-rs
+target: parse_file
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parse_file/testsuite
+cmds:
+  - cmd: /mayhem/parse_file
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/parse_file/parse_file.dict
+    timeout: 30
+    env:
+      MFUZZ_COMPAT_LEVEL: '2'
